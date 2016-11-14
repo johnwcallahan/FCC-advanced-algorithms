@@ -17,9 +17,9 @@ on any combination of the formats provided above. The area code is required. If 
 code is provided, you must confirm that the country code is 1. Return true if the string 
 is a valid US phone number; otherwise return false. */
 
-function telephoneCheck(str) { 
+function telephoneCheck(str) {
 	var match = /^(1\s?)?((\(\d\d\d\))|(\d\d\d))?(\s|\-)?\d\d\d(\s|\-)?\d\d\d\d$/;
-		return match.test(str); 
+	return match.test(str);
 }
 
-console.log(telephoneCheck('800-555-9904'))
+console.log(telephoneCheck('800-555-9904'));

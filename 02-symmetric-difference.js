@@ -7,22 +7,22 @@ two sets, but not in both (A △ B = C = {1, 4}). For every additional symmetric
 you take (say on a set D = {2, 3}), you should get the set with elements which are in either 
 of the two the sets but not both (C △ D = {1, 4} △ {2, 3} = {1, 2, 3, 4}). */
 
-function sym(args) { 
-	function symDiff(arr1, arr2) { 
-		result = [];
-		for (i = 0; i < arr1.length; i++) { 
-			if (arr2.indexOf(arr1[i]) === -1 && result.indexOf(arr1[i]) === -1) { 
+function sym(args) {
+	function symDiff(arr1, arr2) {
+		var result = [];
+		for (var i = 0; i < arr1.length; i++) {
+			if (arr2.indexOf(arr1[i]) === -1 && result.indexOf(arr1[i]) === -1) {
 				result.push(arr1[i]);
 			}
 		}
-		for (i = 0; i < arr2.length; i++) { 
-			if (arr1.indexOf(arr2[i]) === -1 && result.indexOf(arr2[i]) === -1) { 
+		for (i = 0; i < arr2.length; i++) {
+			if (arr1.indexOf(arr2[i]) === -1 && result.indexOf(arr2[i]) === -1) {
 				result.push(arr2[i]);
 			}
 		}
 		return result;
 	}
-	args = Array.prototype.slice.call(arguments); 
+	args = Array.prototype.slice.call(arguments);
 	return args.reduce(symDiff);
 }
 

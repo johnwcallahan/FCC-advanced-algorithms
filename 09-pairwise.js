@@ -15,13 +15,13 @@ Below we'll take their corresponding indices and add them.
 9 + 11 = 20 → Indices 1 + 2 = 3
 3 + 3 = 6 → Return 6 */
 
-function pairwise(arr, arg) { 
-	if (arr.length === 0) { 
-		return 0; 
+function pairwise(arr, arg) {
+	if (arr.length === 0) {
+		return 0;
 	}
 	var indices = [];
-	for (var i = 0; i < arr.length - 1; i++) { 
-		for (var j = i + 1; j < arr.length; j++) { 
+	for (var i = 0; i < arr.length - 1; i++) {
+		for (var j = i + 1; j < arr.length; j++) {
 			if (arr[i] + arr[j] === arg && arr[i] !== null && arr[j] !== null) {
 				indices.push(i, j);
 				arr[i] = null;
@@ -30,8 +30,8 @@ function pairwise(arr, arg) {
 			}
 		}
 	}
-	return indices.reduce(function(a, b) { 
-		return a + b; 
+	return indices.reduce(function(a, b) {
+		return a + b;
 	});
 }
 
